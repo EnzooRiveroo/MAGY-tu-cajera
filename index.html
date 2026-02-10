@@ -24,7 +24,6 @@
             padding-bottom: 50px;
         }
 
-        /* Fondo animado */
         #particles-container {
             position: fixed;
             top: 0;
@@ -59,7 +58,6 @@
             opacity: 0.9;
         }
 
-        /* Contenedor de Botones */
         .btn-container {
             display: flex;
             flex-direction: column;
@@ -69,41 +67,17 @@
             padding: 0 20px;
         }
 
-        /* Animación de Parpadeo Neon */
         @keyframes neonBlink {
-
-            0%,
-            100% {
-                box-shadow: 0 0 5px var(--neon-pink), inset 0 0 5px var(--neon-pink);
-            }
-
-            50% {
-                box-shadow: 0 0 20px var(--neon-pink), inset 0 0 10px var(--neon-pink);
-            }
+            0%,100% { box-shadow: 0 0 5px var(--neon-pink), inset 0 0 5px var(--neon-pink); }
+            50% { box-shadow: 0 0 20px var(--neon-pink), inset 0 0 10px var(--neon-pink); }
         }
 
-        /* Brillo que recorre el botón */
-        @keyframes shine {
-            100% {
-                left: 125%;
-            }
-        }
+        @keyframes shine { 100% { left: 125%; } }
 
-        /* Sacudida sutil */
         @keyframes subtleShake {
-
-            0%,
-            100% {
-                transform: rotate(0deg);
-            }
-
-            25% {
-                transform: rotate(1deg);
-            }
-
-            75% {
-                transform: rotate(-1deg);
-            }
+            0%,100% { transform: rotate(0deg); }
+            25% { transform: rotate(1deg); }
+            75% { transform: rotate(-1deg); }
         }
 
         .custom-btn {
@@ -124,11 +98,9 @@
             overflow: hidden;
             cursor: pointer;
             width: 100%;
-            /* Aplicar parpadeo por defecto */
             animation: neonBlink 2s infinite ease-in-out;
         }
 
-        /* Capa de brillo moviéndose */
         .custom-btn::after {
             content: '';
             position: absolute;
@@ -148,63 +120,20 @@
             border-color: #fff;
         }
 
-        /* Colores específicos con parpadeos personalizados */
         .btn-cronograma {
             background: linear-gradient(45deg, #000, var(--dark-pink));
             border-color: #fff;
             animation: neonBlink 1.5s infinite;
         }
 
-        .btn-fb {
-            border-color: #1877f2;
-            animation: fbBlink 3s infinite;
-        }
+        .btn-fb { border-color: #1877f2; animation: fbBlink 3s infinite; }
+        @keyframes fbBlink { 0%,100% { box-shadow: 0 0 5px #1877f2; } 50% { box-shadow: 0 0 15px #1877f2; } }
 
-        @keyframes fbBlink {
+        .btn-ig { border-color: #e4405f; animation: igBlink 2.5s infinite; }
+        @keyframes igBlink { 0%,100% { box-shadow: 0 0 5px #e4405f; } 50% { box-shadow: 0 0 15px #e4405f; } }
 
-            0%,
-            100% {
-                box-shadow: 0 0 5px #1877f2;
-            }
-
-            50% {
-                box-shadow: 0 0 15px #1877f2;
-            }
-        }
-
-        .btn-ig {
-            border-color: #e4405f;
-            animation: igBlink 2.5s infinite;
-        }
-
-        @keyframes igBlink {
-
-            0%,
-            100% {
-                box-shadow: 0 0 5px #e4405f;
-            }
-
-            50% {
-                box-shadow: 0 0 15px #e4405f;
-            }
-        }
-
-        .btn-wpp {
-            border-color: #25d366;
-            animation: wppBlink 2s infinite;
-        }
-
-        @keyframes wppBlink {
-
-            0%,
-            100% {
-                box-shadow: 0 0 5px #25d366;
-            }
-
-            50% {
-                box-shadow: 0 0 15px #25d366;
-            }
-        }
+        .btn-wpp { border-color: #25d366; animation: wppBlink 2s infinite; }
+        @keyframes wppBlink { 0%,100% { box-shadow: 0 0 5px #25d366; } 50% { box-shadow: 0 0 15px #25d366; } }
 
         .btn-ganamos {
             border-color: var(--gold);
@@ -214,28 +143,13 @@
         }
 
         @keyframes goldBlink {
-
-            0%,
-            100% {
-                box-shadow: 0 0 5px var(--gold);
-                transform: scale(1);
-            }
-
-            50% {
-                box-shadow: 0 0 25px var(--gold);
-                transform: scale(1.02);
-            }
+            0%,100% { box-shadow: 0 0 5px var(--gold); transform: scale(1); }
+            50% { box-shadow: 0 0 25px var(--gold); transform: scale(1.02); }
         }
 
-        .btn-multipanel {
-            border-color: var(--neon-pink);
-        }
+        .btn-multipanel { border-color: var(--neon-pink); }
+        .custom-btn i { font-size: 1.5rem; }
 
-        .custom-btn i {
-            font-size: 1.5rem;
-        }
-
-        /* Modales */
         .modal {
             display: none;
             position: fixed;
@@ -259,19 +173,6 @@
             border-radius: 20px;
             box-shadow: 0 0 50px var(--neon-pink);
             position: relative;
-            animation: modalSlide 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        @keyframes modalSlide {
-            from {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
         }
 
         .close {
@@ -302,7 +203,6 @@
             border-radius: 12px;
             transition: 0.3s;
             font-weight: bold;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         .panel-link:hover {
@@ -315,7 +215,6 @@
             width: 100%;
             border-radius: 10px;
             border: 1px solid var(--neon-pink);
-            box-shadow: 0 0 20px rgba(255, 0, 127, 0.3);
         }
 
         .floating-icon {
@@ -323,14 +222,31 @@
             pointer-events: none;
             z-index: -1;
             color: var(--neon-pink);
-            filter: drop-shadow(0 0 5px var(--neon-pink));
+        }
+
+        /* FOOTER */
+        .footer-dev {
+            margin-top: 40px;
+            padding: 20px 10px;
+            text-align: center;
+            background: linear-gradient(180deg, #0a0a0a, #140014);
+            border-top: 1px solid rgba(255, 0, 127, 0.4);
+            box-shadow: 0 -5px 20px rgba(255, 0, 127, 0.2);
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .footer-dev p { margin: 4px 0; color: #ccc; }
+
+        .footer-dev span {
+            color: var(--neon-pink);
+            font-weight: bold;
+            text-shadow: 0 0 8px var(--neon-pink);
         }
     </style>
 </head>
 
 <body>
-
-    <div id="particles-container"></div>
 
     <div class="hero-section">
         <h1>BIENVENIDOS A TU CAJERA MAGY</h1>
@@ -338,120 +254,48 @@
     </div>
 
     <div class="btn-container">
-        <!-- Cronograma -->
         <button onclick="openModal('modalCronograma')" class="custom-btn btn-cronograma">
             <i class="fas fa-calendar-alt"></i> VER CRONOGRAMA
         </button>
 
-        <!-- Facebook -->
         <a href="https://www.facebook.com/share/1F1KbSA3Vr/" target="_blank" class="custom-btn btn-fb">
             <i class="fab fa-facebook"></i> Facebook
         </a>
 
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/zidaneliapego?igsh=MW9mM2FhYnZuMG5xdw==" target="_blank"
-            class="custom-btn btn-ig">
+        <a href="https://www.instagram.com/zidaneliapego?igsh=MW9mM2FhYnZuMG5xdw==" target="_blank" class="custom-btn btn-ig">
             <i class="fab fa-instagram"></i> Instagram
         </a>
 
-        <!-- WhatsApp 1 -->
         <a href="https://wa.me/5492612389836" target="_blank" class="custom-btn btn-wpp">
             <i class="fab fa-whatsapp"></i> Línea 1
         </a>
 
-        <!-- WhatsApp 2 -->
         <a href="https://wa.me/5492612309009" target="_blank" class="custom-btn btn-wpp">
             <i class="fab fa-whatsapp"></i> Línea 2
         </a>
 
-        <!-- Ganamos -->
         <a href="https://ganamosnet.club" target="_blank" class="custom-btn btn-ganamos">
             <i class="fas fa-crown"></i> GANAMOS
         </a>
 
-        <!-- Multipanel -->
         <button onclick="openModal('modalPaneles')" class="custom-btn btn-multipanel">
             <i class="fas fa-dice-d20"></i> MULTIPANEL
         </button>
     </div>
 
-    <!-- Modal Multipanel -->
-    <div id="modalPaneles" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modalPaneles')">&times;</span>
-            <h3 class="text-pink-500 text-center font-bold text-xl uppercase tracking-widest">Nuestros Paneles</h3>
-            <div class="panel-grid" id="listaPaneles">
-                <!-- Links generados por JS -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Cronograma -->
-    <div id="modalCronograma" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modalCronograma')">&times;</span>
-            <h3 class="text-pink-500 text-center font-bold text-xl mb-4">INFO CRONOGRAMA</h3>
-            <img src="cronograma.png" class="cronograma-img" alt="Cronograma">
-        </div>
-    </div>
+    <footer class="footer-dev">
+        <p>Desarrollado por <span>Enzo Rivero</span> · Frontend Developer</p>
+        <p>© 2026 Todos los derechos reservados</p>
+    </footer>
 
     <script>
-        const linksPaneles = [
-            "https://casinozeus.biz", "https://bet30.blog", "https://celuapuestas.app",
-            "https://konabet.online", "https://bet91.club", "https://bet71.io",
-            "https://24hrsbets.io", "https://fortubet.io", "https://picantesports.net",
-            "https://camelbet.pro", "https://ganaencasa.xyz", "https://apostando.fun",
-            "https://jugamos.fun", "https://bet32.fun", "https://magiplay.site"
-        ];
-
-        const container = document.getElementById('listaPaneles');
-        linksPaneles.forEach(url => {
-            const a = document.createElement('a');
-            a.href = url;
-            a.target = "_blank";
-            a.className = "panel-link";
-            a.innerHTML = `<i class="fas fa-external-link-alt mr-3 text-pink-500"></i> ${url.replace('https://', '').toUpperCase()}`;
-            container.appendChild(a);
-        });
-
         function openModal(id) {
             document.getElementById(id).style.display = "block";
-            document.body.style.overflow = "hidden";
         }
-
         function closeModal(id) {
             document.getElementById(id).style.display = "none";
-            document.body.style.overflow = "auto";
         }
-
-        window.onclick = function(e) {
-            if (e.target.classList.contains('modal')) {
-                e.target.style.display = "none";
-                document.body.style.overflow = "auto";
-            }
-        }
-
-        // Generador de iconos flotantes (Partículas)
-        function spawnParticle() {
-            const icons = ['fa-dice', 'fa-coins', 'fa-spade', 'fa-heart', 'fa-gem', 'fa-star'];
-            const p = document.createElement('i');
-            p.className = `fas ${icons[Math.floor(Math.random() * icons.length)]} floating-icon`;
-            p.style.left = Math.random() * 100 + 'vw';
-            p.style.top = '-50px';
-            p.style.fontSize = (Math.random() * 15 + 15) + 'px';
-            p.style.opacity = Math.random() * 0.5 + 0.1;
-            document.body.appendChild(p);
-
-            const duration = Math.random() * 3000 + 4000;
-            const anim = p.animate([
-                { transform: 'translateY(0) rotate(0deg)', opacity: p.style.opacity },
-                { transform: `translateY(110vh) rotate(${Math.random() * 720}deg)`, opacity: 0 }
-            ], { duration: duration, easing: 'linear' });
-
-            anim.onfinish = () => p.remove();
-        }
-        setInterval(spawnParticle, 500);
     </script>
-</body>
 
+</body>
 </html>
